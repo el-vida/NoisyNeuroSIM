@@ -24,11 +24,19 @@ This repository was created to depict the work on my master thesis on the topic 
 
 # 4. Useful commands
 
-4.1  - LOGGING IN, SYNCHRONIZING
+## 4.1  - LOGGING IN, SYNCHRONIZING
 
 a) ssh -l ev483159 login18-g-2.hpc.itc.rwth-aachen.de --> log in to GPU node of RWTH Cluster! <br />
 b) rsync -avzh -e ssh /net/home/vida/vida/neurosim-test/DNN_NeuroSim_V2.1/ ev483159@login18-g-2.hpc.itc.rwth-aachen.de:/home/ev483159/neurosim-test --> synchronize code on both platform <br />
 c) scp ev483159@login18-g-2.hpc.itc.rwth-aachen.de:~/neurosim-test-v14/NeuroSimV14/Inference_pytorch/output_38905658.txt /Users/eu_el/Desktop --> secure copy certain files from one to another location <br />
+
+## 4.2 - RWTH CLUSTER, JOB SUBMISSION, JOB ENQUIRY
+
+a) squeue -j 37714821 --> ask for status on job ID 37714821 (R:running, P:pending) <br />
+b) sacct --> summary of all submitted jobs <br />
+c) sbatch --gpus=volta:1 --gpus-per-node=volta:1 --partition=c18g jobscript.sh --> submit job to 1 certain NVIDIA Volta-GPU <br />
+
+
 
 # 5. NeuroSIM - How it works
 
