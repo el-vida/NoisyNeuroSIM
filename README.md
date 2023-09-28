@@ -2,6 +2,30 @@
 
 This repository was created to depict the work on my master thesis on the topic "Noise-aware Quantization Flow for Deep Learning Acceleration with Analog In-Memory-Computing", supervised by Rebecca Pelke and José Cubero, at the Institute for Communication Technologies and Embedded Systems, RWTH Aachen University.
 
+
+# Table of Content
+
+1. How to get a HPC Account
+2. How to set up NeuroSIM on HPC cluster
+3. How to run NeuroSIM on HPC cluster
+4. Useful command
+
+-------------------------------------------------------------------------
+
+# 1. How to get a HPC Account
+
+
+# 2. How to set up NeuroSIM on HPC cluster
+
+
+# 3. How to run NeuroSIM on HPC cluster
+
+
+# 4. Useful commands
+
+
+
+
 # References
 [1] Shimeng Yu et. all, Compute-in-Memory Chips for Deep Learning: Recent Trends and Prospects. IEEE MCAS. August 2021. https://doi.org/10.1109/MCAS.2021.3092533   <br />
 [2] X. Peng,et. all. DNN+NeuroSim V2.0: An End-to-End Benchmarking Framework for Compute-in-Memory Accelerators for Training, § IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, doi: 10.1109/TCAD.2020.3043731, 2020.  <br />
