@@ -9,10 +9,11 @@ This repository was created to depict the work on my master thesis on the topic 
 2. How to set up NeuroSIM on HPC cluster
 3. How to run NeuroSIM on HPC cluster
 4. Useful command
+5. NeuroSIM - How it works
 
--------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
 
-# 1. How to get a HPC Account
+# 1. How to get an HPC account
 
 
 # 2. How to set up NeuroSIM on HPC cluster
@@ -23,8 +24,15 @@ This repository was created to depict the work on my master thesis on the topic 
 
 # 4. Useful commands
 
+4.1  - LOGGING IN, SYNCHRONIZING
 
+a) ssh -l ev483159 login18-g-2.hpc.itc.rwth-aachen.de --> log in to GPU node of RWTH Cluster!
+b) rsync -avzh -e ssh /net/home/vida/vida/neurosim-test/DNN_NeuroSim_V2.1/ ev483159@login18-g-2.hpc.itc.rwth-aachen.de:/home/ev483159/neurosim-test --> synchronize code on both platform
+c) scp ev483159@login18-g-2.hpc.itc.rwth-aachen.de:~/neurosim-test-v14/NeuroSimV14/Inference_pytorch/output_38905658.txt /Users/eu_el/Desktop --> secure copy certain files from one to another location
 
+# 5. NeuroSIM - How it works
+
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 # References
 [1] Shimeng Yu et. all, Compute-in-Memory Chips for Deep Learning: Recent Trends and Prospects. IEEE MCAS. August 2021. https://doi.org/10.1109/MCAS.2021.3092533   <br />
