@@ -6,7 +6,7 @@ This repository was created to depict the establishment of the NeuroSIM benchmar
 
 ## Table of Content
 
-1. How to get a HPC Account
+1. How to get an HPC Account
 2. How to set up NeuroSIM on HPC cluster
 3. How to run NeuroSIM on HPC cluster
 4. Useful command
