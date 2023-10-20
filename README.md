@@ -1,6 +1,6 @@
 # NoisyNeuroSIM
 
-This repository was created to depict the work on my master thesis on the topic "Noise-aware Quantization Flow for Deep Learning Acceleration with Analog In-Memory-Computing", supervised by Rebecca Pelke and José Cubero, at the Institute for Communication Technologies and Embedded Systems, RWTH Aachen University.
+This repository was created to depict the establishment of the NeuroSIM benchmarking tool at the HPC cluster of RWTH Aachen University which was part of my work as student assistant at the Institute for Communication Technologies and Embedded Systems.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
