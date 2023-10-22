@@ -45,7 +45,7 @@ These have been modified according to the instructions in the manual and accordi
 
 ### 2.3 - Modify and Import the shell-script 
 
-In the folder "inference_pytorch", copy the file "jobscript.sh" from this repository. This is a shell-script that uses all necessary commands to be used on RTWTH's HPC cluster. It defines the job-name, the memory size and the maximum duration of each job. Furthermore, all necessary modules on the cluster will be loaded such that NeuroSIM can operate properly on the cluster.
+In the folder "inference_pytorch", copy the file "jobscript-inference.sh" from this repository. This is a shell-script that uses all necessary commands to be used on RTWTH's HPC cluster. It defines the job-name, the memory size and the maximum duration of each job. Furthermore, all necessary modules on the cluster will be loaded such that NeuroSIM can operate properly on the cluster.
 
 In the shell-script, you can define the parsing arguments of NeuroSIM. For instance, if you like to call inference.py using DenseNet40 with the CIFAR10 data set in floating point (FP) mode, doing inference-only, then you might call  
 
