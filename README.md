@@ -44,7 +44,7 @@ In the folder "inference_pytorch", copy the file "jobscript-inference.sh" from t
 
 In the shell-script, you can define the parsing arguments of NeuroSIM. For instance, if you like to call inference.py using DenseNet40 with the CIFAR10 data set in floating point (FP) mode, doing inference-only, then you might call  
 
-python inference.py --dataset cifar10 --model DenseNet40 --mode FP --inference 1
+<code>python inference.py --dataset cifar10 --model DenseNet40 --mode FP --inference 1</code>
 
 in the "### run NeuroSIM" section of the shell-script.
 
@@ -52,7 +52,7 @@ in the "### run NeuroSIM" section of the shell-script.
 
 Using scp-command on a terminal, you can copy your folder (called FOLDER_NAME), which lies on LOCAL_PATH to your HPC cluster space, using our RWTH TIM_ID, as follows:
 
-scp -r /LOCAL_PATH/FOLDER_NAME TIM_ID@login18-g-2.hpc.itc.rwth-aachen.de:~/ .
+<code>scp -r /LOCAL_PATH/FOLDER_NAME TIM_ID@login18-g-2.hpc.itc.rwth-aachen.de:~/</code> .
 
 Now NeuroSIM v1.4 is fully set up on your personal HPC cluster space, and it is ready to run.
 
@@ -62,7 +62,7 @@ First, you log into your HPC account on the GPU cluster.
 Change directory to "Inference_pytorch".
 You can now create a job using the following command:
 
-sbatch --gpus=volta:1 --gpus-per-node=volta:1 --partition=c18g jobscript.sh .
+<code>sbatch --gpus=volta:1 --gpus-per-node=volta:1 --partition=c18g jobscript.sh</code>.
 
 This command will use one volta-gpu on one node on the c18g-compute node, and run the shell-script jobscript.sh .
 
@@ -82,25 +82,25 @@ Here is a brief explanation of variable names, which are used later in the comma
 ### 4.1  - LOGGING IN, SYNCHRONIZING
 
 a) <code>ssh -l TIM_ID login18-g-2.hpc.itc.rwth-aachen.de</code> --> log in to GPU node of RWTH Cluster! <br />
-b) rsync -avzh -e ssh /PATH_TO_NEUROSIM TIM_ID@login18-g-2.hpc.itc.rwth-aachen.de:/HPC_PATH_TO_NEUROSIM --> synchronize code on both platform <br />
-c) scp TIM_ID@login18-g-2.hpc.itc.rwth-aachen.de:~/HPC_PATH_TO_NEUROSIM/Inference_pytorch/output_JOB-ID.txt DESIRED_COPY_DESTINATION_PATH --> secure copy certain files from one to another location <br />
+b) <code>rsync -avzh -e ssh /PATH_TO_NEUROSIM TIM_ID@login18-g-2.hpc.itc.rwth-aachen.de:/HPC_PATH_TO_NEUROSIM</code> --> synchronize code on both platform <br />
+c) <code>scp TIM_ID@login18-g-2.hpc.itc.rwth-aachen.de:~/HPC_PATH_TO_NEUROSIM/Inference_pytorch/output_JOB-ID.txt DESIRED_COPY_DESTINATION_PATH</code> --> secure copy certain files from one to another location <br />
 
 ### 4.2 - RWTH CLUSTER, JOB SUBMISSION, JOB ENQUIRY
 
-a) squeue -j 12345678 --> ask for status on job ID 12345678 (R:running, P:pending) <br />
-b) sacct --> summary of all submitted jobs <br />
-c) sbatch --gpus=volta:1 --gpus-per-node=volta:1 --partition=c18g jobscript.sh --> submit job to 1 certain NVIDIA Volta-GPU <br />
+a) <code>squeue -j 12345678</code> --> ask for status on job ID 12345678 (R:running, P:pending) <br />
+b) <code>sacct</code> --> summary of all submitted jobs <br />
+c) <code>sbatch --gpus=volta:1 --gpus-per-node=volta:1 --partition=c18g jobscript.sh</code> --> submit job to 1 certain NVIDIA Volta-GPU <br />
 
 
 ### 4.3 - MODIFY DOCUMENTS
 
-a) vim jobscript.sh --> read and modify document called "jobscript.sh" <br />
+a) <code>vim jobscript.sh</code> --> read and modify document called "jobscript.sh" <br />
 b) --> a) "i" insert mode: modifying document becomes now possible + ESC to terminate insert mode <br />
 c) --> b) ":wq!" : exit file <br />
 
 ### 4.4 - HPC Cluster Core Hours
 
-a) r_wlm_usage -q --> checking monthly or yearly core hour usage of RWTH cluster!
+a) <code>r_wlm_usage -q</code> --> checking monthly or yearly core hour usage of RWTH cluster!
 
 ## 5. NeuroSIM - How it works
 
