@@ -58,8 +58,5 @@ cd ../
 ### OTHER EXAMPLES (not from manual)
 python ./inference.py --dataset cifar10 --model DenseNet40 --mode WAGE --inference 1
 
-# Other useful commands:
-# lspci | grep VGA # --> find GPUs in current system
-
 # Comments:
 # With Python 3.7.4, 3.8.2, 3.8.6 --> numpy version is not compatible
