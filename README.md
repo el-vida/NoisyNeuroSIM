@@ -1,6 +1,6 @@
 # NoisyNeuroSIM
 
-This repository was created to depict the establishment of the NeuroSIM benchmarking tool at the HPC cluster of RWTH Aachen University which was part of my work as student assistant at the Institute for Communication Technologies and Embedded Systems.
+This repository was created to depict the establishment of the NeuroSIM benchmarking tool at the HPC cluster of RWTH Aachen University which was part of my work as student assistant at the Institute for Communication Technologies and Embedded Systems, for the use of simulating noise characteristics of crossbars.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -9,31 +9,90 @@ This repository was created to depict the establishment of the NeuroSIM benchmar
 1. How to get an HPC Account
 2. How to set up NeuroSIM on HPC cluster
 3. How to run NeuroSIM on HPC cluster
-4. Useful command
+4. Useful commands
 5. NeuroSIM - How it works
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 1. How to get an HPC account
 
+As a student of RWTH Aachen University, you can connect your student account with the HPC-Cluster. 
+More information is provided at the website the IT center of RWTH: 
+
+https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/14573fc745ee478ba855539c240108b6/ .
+
+Alternatively, for more sophisticated usage, it is possible to register more computer resources on the HPC cluster in form of a registered project, which can be accessed by students and researchers:
+
+https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/45825b06afb647e194be4a5b9f5b8768/ .
+
+In this project, we decided to use the GPU-node of the cluster ("login18-g-2"), as NeuroSIM needs nvidia drivers to run properly on the cluster. For more information on the cluster nodes available to students, please consider the following website:
+
+https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/3fb4cb953142422dbbb656c1c3253cff/ .
+
 
 ## 2. How to set up NeuroSIM on HPC cluster
 
+Once the account is created, the following steps have to be done in order to run NeuroSIM v1.4 on the HPC clusters:
+
+### 2.1 - Get NeuroSIM V1.4
+
+First, clone the repository for NeuroSIM V1.4 ( https://github.com/neurosim/DNN_NeuroSim_V1.4 ) to the location of your preference.
+
+### 2.2 - Modify NeuroSIM accordingly
+
+Now, we substitute the files "param.cpp" and "inference.py" with the ones that can be found in this repository.
+These have been modified according to the instructions in the manual and according to parameters which we fixed after discussion during my time as a student assistant at ICE. More details about these parameters can be found in the excel-file in this repository.
+
+### 2.3 - Modify and Import the shell-script 
+
+In the folder "inference_pytorch", copy the file "jobscript.sh" from this repository. This is a shell-script that uses all necessary commands to be used on RTWTH's HPC cluster. It defines the job-name, the memory size and the maximum duration of each job. Furthermore, all necessary modules on the cluster will be loaded such that NeuroSIM can operate properly on the cluster.
+
+In the shell-script, you can define the parsing arguments of NeuroSIM. For instance, if you like to call inference.py using DenseNet40 with the CIFAR10 data set in floating point (FP) mode, doing inference-only, then you might call  
+
+python inference.py --dataset cifar10 --model DenseNet40 --mode FP --inference 1
+
+in the "### run NeuroSIM" section of the shell-script.
+
+### 2-4 - Transfer the folder to the HPC cluster
+
+Using scp-command on a terminal, you can copy your folder (called FOLDER_NAME), which lies on LOCAL_PATH to your HPC cluster space, using our RWTH TIM_ID, as follows:
+
+scp -r /LOCAL_PATH/FOLDER_NAME TIM_ID@login18-g-2.hpc.itc.rwth-aachen.de:~/ .
+
+Now NeuroSIM v1.4 is fully set up on your personal HPC cluster space, and it is ready to run.
 
 ## 3. How to run NeuroSIM on HPC cluster
 
+First, you log into your HPC account on the GPU cluster.
+Change directory to "Inference_pytorch".
+You can now create a job using the following command:
+
+sbatch --gpus=volta:1 --gpus-per-node=volta:1 --partition=c18g jobscript.sh .
+
+This command will use one volta-gpu on one node on the c18g-compute node, and run the shell-script jobscript.sh .
 
 ## 4. Useful commands
 
+This is a collection of useful terminal commands that were crucial for my work on this project, which I would like to share with anyone working on similar benchmarking projects.
+
+## 4.0 Variables
+
+Here is a brief explanation of variable names, which are used later in the commands as substitutions for your individual case, like path names or ids.
+
+TIM_ID is cour RWTH ID.
+PATH_TO_NEUROSIM is your local path to the NeuroSIM folder.
+HPC_PATH_TO_NEUROSIM is the path to the NeuroSIM folder on the HPC cluster.
+JOB-ID is the specific ID of your job submitted to the HPC cluster by calling the jobscript using sbatch.
+
 ### 4.1  - LOGGING IN, SYNCHRONIZING
 
-a) ssh -l ev483159 login18-g-2.hpc.itc.rwth-aachen.de --> log in to GPU node of RWTH Cluster! <br />
-b) rsync -avzh -e ssh /net/home/vida/vida/neurosim-test/DNN_NeuroSim_V2.1/ ev483159@login18-g-2.hpc.itc.rwth-aachen.de:/home/ev483159/neurosim-test --> synchronize code on both platform <br />
-c) scp ev483159@login18-g-2.hpc.itc.rwth-aachen.de:~/neurosim-test-v14/NeuroSimV14/Inference_pytorch/output_38905658.txt /Users/eu_el/Desktop --> secure copy certain files from one to another location <br />
+a) ssh -l TIM_ID login18-g-2.hpc.itc.rwth-aachen.de --> log in to GPU node of RWTH Cluster! <br />
+b) rsync -avzh -e ssh /PATH_TO_NEUROSIM TIM_ID@login18-g-2.hpc.itc.rwth-aachen.de:/HPC_PATH_TO_NEUROSIM --> synchronize code on both platform <br />
+c) scp TIM_ID@login18-g-2.hpc.itc.rwth-aachen.de:~/HPC_PATH_TO_NEUROSIM/Inference_pytorch/output_JOB-ID.txt DESIRED_COPY_DESTINATION_PATH --> secure copy certain files from one to another location <br />
 
 ### 4.2 - RWTH CLUSTER, JOB SUBMISSION, JOB ENQUIRY
 
-a) squeue -j 37714821 --> ask for status on job ID 37714821 (R:running, P:pending) <br />
+a) squeue -j 12345678 --> ask for status on job ID 12345678 (R:running, P:pending) <br />
 b) sacct --> summary of all submitted jobs <br />
 c) sbatch --gpus=volta:1 --gpus-per-node=volta:1 --partition=c18g jobscript.sh --> submit job to 1 certain NVIDIA Volta-GPU <br />
 
@@ -48,6 +107,8 @@ c) --> b) ":wq!" : exit file
 a) r_wlm_usage -q --> checking monthly or yearly core hour usage of RWTH cluster!
 
 ## 5. NeuroSIM - How it works
+
+For this, please refer to the NeuroSIM manual.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
