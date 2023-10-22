@@ -17,17 +17,11 @@ This repository was created to explain the implementation of the NeuroSIM benchm
 ## 1. How to get an HPC account
 
 As a student of RWTH Aachen University, you can connect your student account with the HPC-Cluster. 
-More information is provided at the website the IT center of RWTH: 
+More information is provided at the [website the IT center of RWTH](https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/14573fc745ee478ba855539c240108b6/).
 
-https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/14573fc745ee478ba855539c240108b6/ .
+Alternatively, for more sophisticated usage, it is possible to [access more computing resources on the HPC cluster in form of a registered project](https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/45825b06afb647e194be4a5b9f5b8768/ ), which can be accessed by students and researchers of RWTH.
 
-Alternatively, for more sophisticated usage, it is possible to register more computer resources on the HPC cluster in form of a registered project, which can be accessed by students and researchers:
-
-https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/45825b06afb647e194be4a5b9f5b8768/ .
-
-In this project, we decided to use the GPU-node of the cluster ("login18-g-2"), as NeuroSIM needs nvidia drivers to run properly on the cluster. For more information on the cluster nodes available to students, please consider the following website:
-
-https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/3fb4cb953142422dbbb656c1c3253cff/ .
+In this project, we decided to use the GPU-node of the cluster ("login18-g-2"), as NeuroSIM needs nvidia drivers to run properly on the cluster. For more information on the cluster nodes available to students, please consider the following [website](https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/3fb4cb953142422dbbb656c1c3253cff/).
 
 
 ## 2. How to set up NeuroSIM on HPC cluster
@@ -36,7 +30,7 @@ Once the account is created, the following steps have to be done in order to run
 
 ### 2.1 - Get NeuroSIM V1.4
 
-First, clone the repository for NeuroSIM V1.4 ( https://github.com/neurosim/DNN_NeuroSim_V1.4 ) to a location of your preference.
+First, clone the repository for [NeuroSIM V1.4](https://github.com/neurosim/DNN_NeuroSim_V1.4) to a location of your preference.
 
 ### 2.2 - Modify NeuroSIM accordingly
 
