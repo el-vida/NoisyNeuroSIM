@@ -115,7 +115,12 @@ The following illustration provides an overview to the general execution flow of
 First, the user defines the parameters such as model-parameters, hardware-architecture parameters, benchmark settings and many more.
 Then, using the make command, the user compiles the CPP-code into object-files, which will be used for the hardware simulation. 
 If needed, the user can first train his indivdual DNN-model using train.py. After training, inference will be simulated by executing inference.py. 
-This program will use main.cpp for the hardware simulation, which contains several functions for calulating the performance and latency of hardware parameters that are used in each indivdual hardware configuration.
+This program will use main.cpp for the hardware simulation, which contains several functions for calulating the power and latency of hardware parameters that are used in each indivdual hardware configuration. 
+An overview of the latency and power calculation can be seen in the following illustration:
+
+![Power and Latency Calculation in NeuroSIM](Documents/Images/NeuroSIM-PowerCalc.png)
+
+Finally, all calculation results are printed into a respective log-file for further analysis, representing the simulation output of NeuroSIM.
 
 ### 5.2 How does NeuroSIM apply quantization?
 
