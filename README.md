@@ -74,10 +74,10 @@ This is a collection of useful terminal commands that were crucial for my work o
 
 Here is a brief explanation of variable names, which are used later in the commands as substitutions for your individual case, like path names or ids.
 
-**TIM_ID**                     is cour RWTH ID. <br />
-**PATH_TO_NEUROSIM**           is your local path to the NeuroSIM folder. <br />
-**HPC_PATH_TO_NEUROSIM**       is the path to the NeuroSIM folder on the HPC cluster. <br />
-**JOB-ID**                     is the specific ID of your job submitted to the HPC cluster by calling the jobscript using sbatch. <br />
+**TIM_ID**                     &nbsp;&nbsp;&nbsp;&nbsp;is cour RWTH ID. <br />
+**PATH_TO_NEUROSIM**           &nbsp;&nbsp;&nbsp;&nbsp;is your local path to the NeuroSIM folder. <br />
+**HPC_PATH_TO_NEUROSIM**       &nbsp;&nbsp;&nbsp;&nbsp;is the path to the NeuroSIM folder on the HPC cluster. <br />
+**JOB-ID**                     &nbsp;&nbsp;&nbsp;&nbsp;is the specific ID of your job submitted to the HPC cluster by calling the jobscript using sbatch. <br />
 
 ### 4.1  - LOGGING IN, SYNCHRONIZING
 
