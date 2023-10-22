@@ -129,6 +129,11 @@ The authors of NeuroSIM primarily use WAGE-quatization for their benchmarking fr
 In the repository, you can find a short summary of the quantization technique in the "Documents"-folder, which was part of my work as a student assistant at ICE.
 
 
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+## Background
+
+Analog In-Memory-Computing (AIMC) has emerged as an attractive alternative to conventional von Neumann (digital) architectures for addressing the energy and latency cost of memory accesses in data-centric machine learning workloads. Analog IMCs embed low-energy analogue computations in the memory array to execute machine learning computations such as matrix-vector multiply (MVM) and dot products (DPs). However, converting data between digital and analogue domains has a cost that must be carefully studied.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
@@ -144,12 +149,6 @@ In the repository, you can find a short summary of the quantization technique in
 [6] Joshi, V., Le Gallo, M., Haefeli, S. et al. Accurate deep neural network inference using computational phase-change memory. Nat Commun 11, 2473 (2020). https://doi.org/10.1038/s41467-020-16108-9  <br />
 [7] Mackin, C., Rasch, M.J., Chen, A. et al. Optimised weight programming for analogue memory-based deep neural networks. Nat Commun 13, 3765 (2022). https://doi.org/10.1038/s41467-022-31405-1   <br />
 [8] C. -Y. Chang, K. -C. Chou, Y. -C. Chuang and A. -Y. Wu, "E-UPQ: Energy-Aware Unified Pruning-Quantization Framework for CIM Architecture," in IEEE Journal on Emerging and Selected Topics in Circuits and Systems, vol. 13, no. 1, pp. 21-32, March 2023, doi: 10.1109/JETCAS.2023.3242761. <br /> 
-
-------------------------------------------------------------------------------------------------------------------------------------------------
-
-## Background
-
-Analog In-Memory-Computing (AIMC) has emerged as an attractive alternative to conventional von Neumann (digital) architectures for addressing the energy and latency cost of memory accesses in data-centric machine learning workloads. Analog IMCs embed low-energy analogue computations in the memory array to execute machine learning computations such as matrix-vector multiply (MVM) and dot products (DPs). However, converting data between digital and analogue domains has a cost that must be carefully studied.
 
 
 
