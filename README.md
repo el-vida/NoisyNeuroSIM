@@ -36,7 +36,7 @@ Once the account is created, the following steps have to be done in order to run
 
 ### 2.1 - Get NeuroSIM V1.4
 
-First, clone the repository for NeuroSIM V1.4 ( https://github.com/neurosim/DNN_NeuroSim_V1.4 ) to the location of your preference.
+First, clone the repository for NeuroSIM V1.4 ( https://github.com/neurosim/DNN_NeuroSim_V1.4 ) to a location of your preference.
 
 ### 2.2 - Modify NeuroSIM accordingly
 
