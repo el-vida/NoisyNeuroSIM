@@ -7,7 +7,7 @@ This repository was created to explain the implementation of the NeuroSIM benchm
 ## Table of Content
 
 1. How to get an HPC Account
-2. How to set up NeuroSIM on HPC cluster
+2. How to set up NeuroSIM on the HPC cluster
 3. How to run NeuroSIM on HPC cluster
 4. Useful commands
 5. NeuroSIM - How it works
@@ -24,7 +24,7 @@ Alternatively, for more sophisticated usage, it is possible to [access more comp
 In this project, we decided to use the GPU-node of the cluster ("login18-g-2"), as NeuroSIM needs nvidia drivers to run properly on the cluster. For more information on the cluster nodes available to students, please consider the following [website](https://help.itc.rwth-aachen.de/service/rhr4fjjutttf/article/3fb4cb953142422dbbb656c1c3253cff/).
 
 
-## 2. How to set up NeuroSIM on HPC cluster
+## 2. How to set up NeuroSIM on the HPC cluster
 
 Once the account is created, the following steps have to be done in order to run NeuroSIM v1.4 on the HPC clusters:
 
