@@ -104,7 +104,16 @@ a) <code>r_wlm_usage -q</code> --> checking monthly or yearly core hour usage of
 
 ## 5. NeuroSIM - How it works
 
-For this, please refer to the NeuroSIM manual.
+For general information regarding [NeuroSIM V1.4](https://github.com/neurosim/DNN_NeuroSim_V1.4), please refer to the NeuroSIM manual, which can be found in the github repository under Documents.
+
+### 5.1 How does NeuroSIM apply quantization?
+
+The authors of NeuroSIM primarily use WAGE-quatization for their benchmarking framework. The repository can be found [here](https://github.com/stevenygd/WAGE.pytorch) and the original paper is available [here](https://arxiv.org/pdf/1802.04680.pdf).
+
+In the repository, you can find a short summary of the quantization technique in the "Documents"-folder, which was part of my work as a student assistant at ICE.
+
+
+
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
