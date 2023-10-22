@@ -1,6 +1,6 @@
 # NoisyNeuroSIM
 
-This repository was created to explain the implementation of the NeuroSIM benchmarking tool at the HPC cluster of RWTH Aachen University which was part of my work as student assistant at the Institute for Communication Technologies and Embedded Systems, for the use of simulating noise characteristics of crossbars.
+This repository was created to explain the implementation of the NeuroSIM benchmarking tool at the HPC cluster of RWTH Aachen University which was part of my work as student assistant at the Institute for Communication Technologies and Embedded Systems (ICE), for the use of simulating noise characteristics of crossbars.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
