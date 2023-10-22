@@ -63,24 +63,3 @@ python ./inference.py --dataset cifar10 --model DenseNet40 --mode WAGE --inferen
 
 # Comments:
 # With Python 3.7.4, 3.8.2, 3.8.6 --> numpy version is not compatible
-
-# USEFUL commands:
-# 1 - LOGGING IN, SYNCHRONIZING
-# ssh -l ev483159 login18-g-2.hpc.itc.rwth-aachen.de --> log in to GPU node of RWTH Cluster!
-# rsync -avzh -e ssh /net/home/vida/vida/neurosim-test/DNN_NeuroSim_V2.1/ ev483159@login18-g-2.hpc.itc.rwth-aachen.de:/home/ev483159/neurosim-test --> synchronize code on both platform
-
-# 2 - RWTH CLUSTER, JOB SUBMISSION, JOB ENQUIRY
-# squeue -j 37714821 --> ask for status on job ID 37714821 (R:running, P:pending)
-# sacct --> summary of all submitted jobs
-# sbatch --gpus=volta:1 --gpus-per-node=volta:1 --partition=c18g jobscript.sh --> submit job to 1 certain NVIDIA Volta-GPU
-# scp ev483159@login18-g-2.hpc.itc.rwth-aachen.de:~/neurosim-test-v14/NeuroSimV14/Inference_pytorch/output_38905658.txt /Users/eu_el/Desktop --> secure copy certain files from one to another location
-
-# 3 - MODIFY DOCUMENTS, 
-# vim jobscript.sh --> read and modify document called "jobscript.sh" 
-# --> a) "i" insert mode: modifying document becomes now possible + ESC to terminate insert mode
-# --> b) ":wq!" : exit file
-
-# 4 - HPC Cluster Core Hours
-# r_wlm_usage -q --> checking monthly or yearly core hour usage of RWTH cluster!
-
-# /Users/eu_el/Desktop/HIWI_ICE/Projects/NeuroSimV14
