@@ -41,7 +41,7 @@ First, clone the repository for NeuroSIM V1.4 ( https://github.com/neurosim/DNN_
 ### 2.2 - Modify NeuroSIM accordingly
 
 Now, we substitute the files "param.cpp" and "inference.py" with the ones that can be found in this repository.
-These have been modified according to the instructions in the manual and according to parameters which we fixed after discussion during my time as a student assistant at ICE. More details about these parameters can be found in the excel-file in this repository.
+These have been modified according to the instructions in the manual and according to parameters which we fixed after discussion during my time as a student assistant at ICE. More details about these parameters can be found in the excel-file "NeuroSIM presentation - tables.xlsx" in this repository, in the folder "Documents".
 
 ### 2.3 - Modify and Import the shell-script 
 
