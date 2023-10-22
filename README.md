@@ -112,7 +112,10 @@ The following illustration provides an overview to the general execution flow of
 
 ![Program Execution Flow of NeuroSIM](Documents/Images/NeuroSIM-ProgramFlow.png)
 
-First, the user 
+First, the user defines the parameters such as model-parameters, hardware-architecture parameters, benchmark settings and many more.
+Then, using the make command, the user compiles the CPP-code into object-files, which will be used for the hardware simulation. 
+If needed, the user can first train his indivdual DNN-model using train.py. After training, inference will be simulated by executing inference.py. 
+This program will use main.cpp for the hardware simulation, which contains several functions for calulating the performance and latency of hardware parameters that are used in each indivdual hardware configuration.
 
 ### 5.2 How does NeuroSIM apply quantization?
 
