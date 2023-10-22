@@ -110,7 +110,7 @@ For general information regarding [NeuroSIM V1.4](https://github.com/neurosim/DN
 
 The following illustration provides an overview to the general execution flow of NeuroSIM:
 
-![Program Execution Flow of NeuroSIM](/Documents/Images/"NeuroSIM - Program Flow".png)
+![Program Execution Flow of NeuroSIM](Documents/Images/NeuroSIM - Program Flow.png)
 
 First, the user 
 
