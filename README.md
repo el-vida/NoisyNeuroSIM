@@ -96,7 +96,8 @@ a) squeue -j 12345678 --> ask for status on job ID 12345678 (R:running, P:pendin
 b) sacct --> summary of all submitted jobs <br />
 c) sbatch --gpus=volta:1 --gpus-per-node=volta:1 --partition=c18g jobscript.sh --> submit job to 1 certain NVIDIA Volta-GPU <br />
 
-### 4.3 - MODIFY DOCUMENTS, 
+
+### 4.3 - MODIFY DOCUMENTS
 
 a) vim jobscript.sh --> read and modify document called "jobscript.sh" <br />
 b) --> a) "i" insert mode: modifying document becomes now possible + ESC to terminate insert mode <br />
