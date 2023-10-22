@@ -79,13 +79,10 @@ This is a collection of useful terminal commands that were crucial for my work o
 
 Here is a brief explanation of variable names, which are used later in the commands as substitutions for your individual case, like path names or ids.
 
-TIM_ID is cour RWTH ID.
-
-PATH_TO_NEUROSIM is your local path to the NeuroSIM folder.
-
-HPC_PATH_TO_NEUROSIM is the path to the NeuroSIM folder on the HPC cluster.
-
-JOB-ID is the specific ID of your job submitted to the HPC cluster by calling the jobscript using sbatch.
+TIM_ID                     is cour RWTH ID. <br />
+PATH_TO_NEUROSIM           is your local path to the NeuroSIM folder. <br />
+HPC_PATH_TO_NEUROSIM       is the path to the NeuroSIM folder on the HPC cluster. <br />
+JOB-ID                     is the specific ID of your job submitted to the HPC cluster by calling the jobscript using sbatch. <br />
 
 ### 4.1  - LOGGING IN, SYNCHRONIZING
 
@@ -101,9 +98,9 @@ c) sbatch --gpus=volta:1 --gpus-per-node=volta:1 --partition=c18g jobscript.sh -
 
 ### 4.3 - MODIFY DOCUMENTS, 
 
-a) vim jobscript.sh --> read and modify document called "jobscript.sh" 
-b) --> a) "i" insert mode: modifying document becomes now possible + ESC to terminate insert mode
-c) --> b) ":wq!" : exit file
+a) vim jobscript.sh --> read and modify document called "jobscript.sh" <br />
+b) --> a) "i" insert mode: modifying document becomes now possible + ESC to terminate insert mode <br />
+c) --> b) ":wq!" : exit file <br />
 
 ### 4.4 - HPC Cluster Core Hours
 
