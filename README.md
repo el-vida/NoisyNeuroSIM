@@ -81,7 +81,7 @@ Here is a brief explanation of variable names, which are used later in the comma
 
 ### 4.1  - LOGGING IN, SYNCHRONIZING
 
-a) ssh -l TIM_ID login18-g-2.hpc.itc.rwth-aachen.de --> log in to GPU node of RWTH Cluster! <br />
+a) <code>ssh -l TIM_ID login18-g-2.hpc.itc.rwth-aachen.de</code> --> log in to GPU node of RWTH Cluster! <br />
 b) rsync -avzh -e ssh /PATH_TO_NEUROSIM TIM_ID@login18-g-2.hpc.itc.rwth-aachen.de:/HPC_PATH_TO_NEUROSIM --> synchronize code on both platform <br />
 c) scp TIM_ID@login18-g-2.hpc.itc.rwth-aachen.de:~/HPC_PATH_TO_NEUROSIM/Inference_pytorch/output_JOB-ID.txt DESIRED_COPY_DESTINATION_PATH --> secure copy certain files from one to another location <br />
 
