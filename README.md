@@ -95,8 +95,8 @@ c) <code>sbatch --gpus=volta:1 --gpus-per-node=volta:1 --partition=c18g jobscrip
 ### 4.3 - MODIFY DOCUMENTS
 
 a) <code>vim jobscript.sh</code> --> read and modify document called "jobscript.sh" <br />
-b) --> a) "i" insert mode: modifying document becomes now possible + ESC to terminate insert mode <br />
-c) --> b) ":wq!" : exit file <br />
+b) --> "i" insert mode: modifying document becomes now possible + ESC to terminate insert mode <br />
+c) --> ":wq!" : exit file <br />
 
 ### 4.4 - HPC Cluster Core Hours
 
