@@ -75,13 +75,16 @@ This command will use one volta-gpu on one node on the c18g-compute node, and ru
 
 This is a collection of useful terminal commands that were crucial for my work on this project, which I would like to share with anyone working on similar benchmarking projects.
 
-## 4.0 Variables
+## "Global" Variables
 
 Here is a brief explanation of variable names, which are used later in the commands as substitutions for your individual case, like path names or ids.
 
 TIM_ID is cour RWTH ID.
+
 PATH_TO_NEUROSIM is your local path to the NeuroSIM folder.
+
 HPC_PATH_TO_NEUROSIM is the path to the NeuroSIM folder on the HPC cluster.
+
 JOB-ID is the specific ID of your job submitted to the HPC cluster by calling the jobscript using sbatch.
 
 ### 4.1  - LOGGING IN, SYNCHRONIZING
